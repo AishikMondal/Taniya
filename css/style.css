@@ -111,8 +111,11 @@ body {
   opacity: 80%;
   display: grid;
   grid-template-areas: "img" "head" "text" "bubble" "foot";
-  grid-gap: 6px;
- 
+  grid-gap: 5px;
+  width: auto;
+  padding-right: 0px;
+  margin-right: 0px;
+  overflow: hidden;
 }
 h3{
   font-family: 'Mina', sans-serif;
