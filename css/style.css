@@ -1,0 +1,124 @@
+body {
+    font-size: 15pt;
+}
+.light {
+  top: -20px;
+  color: white;
+  text-shadow: 5px 4px 3px #251BFF, 0 0 25px blue, 0 0 5px darkblue;
+  border: 1px solid white;
+  border-radius: 90px;
+  font-size: 6vh;
+  margin-left: 10px;
+  letter-spacing: 5px;
+  width: 50px;
+  font-family: 'Sonsie One', cursive;
+}
+
+.bubble {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+}
+
+.heart {
+  top: 300px;
+  position: relative;
+  height: 40px;
+  width: 25px;
+  border-radius: 200px 200px 0 0;
+  transform: rotate(45deg);
+  background: rgba(255, 0, 250, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  animation: move 11s linear infinite alternate ;
+  z-index: 6;
+}
+
+.heart::before {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 25px;
+  background: rgba(255, 0, 250, 0.8);
+  transform: rotate(-90deg);
+  border-radius: 200px 200px 0 0;
+  left: -10px;
+  top: 10px;
+  animation-delay: 1s;
+  z-index: 7;
+}
+
+@keyframes move {
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+
+
+img {
+  grid-area: "img";
+  border-radius: 100px;
+  transform: skew(1deg);
+  box-shadow: 10px 10px 10px rgba(30, 4, 7, 1);
+  position: absolute;
+left: 100px;
+  border: 5px solid #5F05FFA6;
+  text-align: center;
+
+}
+
+.text {
+  grid-area: "text";
+  text-align: center;
+  font-size: 3vh;
+  font-family: Elephant;
+  margin-top: 160px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  border-left: 4px dashed sandybrown;
+  border: 4px dashed sandybrown;
+  border-radius: 20px;
+  font-weight: bold;
+  background: linear-gradient(50deg,#FF0505C7,#FF05EBE3,#FFFD05C9,#05FFE1C9);
+}
+
+.head {
+  background: linear-gradient(178deg,#00FFD2F5, #FF00AEF5, #39FF00F5, #39FF0000) ;
+  grid-area: "head";
+  display: flex;
+  border: 5px dashed #251BFF;
+  flex-direction: row-reverse;
+  justify-content: center;
+  position: relative;
+
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 8px 7px 6px rgba(45, 55, 77, 0.8);
+ 
+}
+
+strong h1{
+  color:#40FF1B;
+  font-family: 'Mina', sans-serif;
+font-family: 'Monoton', cursive;
+font-size: 5vh;
+  
+}
+body {
+  background: linear-gradient(90deg, #019FFA9E, #FF009A99);
+  opacity: 80%;
+  display: grid;
+  grid-template-areas: "img" "head" "text" "bubble" "foot";
+  grid-gap: 6px;
+ 
+}
+h3{
+  font-family: 'Mina', sans-serif;
+}
+
+footer{
+  grid-area: "foot";
+  font-size: 2vh;
+}
